@@ -1,0 +1,73 @@
+$background-primary: #EEEEEE;
+$background-card: #FFFFFF;
+
+* { box-sizing: border-box; }
+html, body {
+    background-color: $background-primary;
+}
+
+.card {
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        &-group {
+            display: inline;
+            &-button{
+                margin: 0;
+                border: none;
+                background-color: #333333;
+                color: $background-primary;
+                padding: 5px;
+
+                &--active {
+                    color: red;
+                }
+
+                &:first-child{
+                    border-radius: 40px 0 0 40px;
+                    margin-right: -5px;
+                }
+                &:last-child{
+                    border-radius: 0 40px 40px 0;
+                    margin-left: -5px;
+                }
+            }
+           
+        }
+    }
+
+    &__content {
+        display: flex;
+        height: 280px;
+        width: 100%;
+        margin-top: 20px;
+        margin-right: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; // Auto scroll on move mouse pointer
+        scroll-behavior: smooth;
+
+        &-item {
+            display: flex;
+            flex-shrink: 0;
+            width: 100%;
+            height: 250px;
+            margin-right: 10px;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            background-color: $background-card;
+            scroll-snap-align: start;
+            transform: scale(1);
+            transition: transform 0.5s;
+            transform-origin: center center;
+            
+            &:target {
+                box-shadow: 0 0 2px 0 rgba(0,0,0, 0.14), 
+                0 2px 2px 0 rgba(0,0,0, 0.12), 0 1px 3px 0 rgba(0,0,0, 0.20);
+            }
+        }
+    }
+}
