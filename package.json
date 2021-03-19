@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server:dev": "http-server .",
     "build": "sass --style:compressed --no-source-map assets/style.scss css/style.css",
-    "build:dev": "sass --watch --no-source-map assets/style.scss css/style.css",
+    "build:dev": "sass --watch --no-source-map assets/style.scss css/style.css"
   },
   "keywords": [],
   "author": "",
